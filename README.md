@@ -1,3 +1,5 @@
-####How to
-	~>$ open -a Docker
-        ~>$ docker-compose up -d
+### How to
+   
+   ~>$ open -a Docker
+   
+   ~>$ docker-compose up -d
