@@ -1,0 +1,20 @@
+version: '3.5'
+
+networks:
+  conda-net:
+    name: my-conda-net
+    driver: bridge
+
+volumes:
+  conda-storage:
+
+services:
+  miniconda:
+    container_name: 'jupyter_docker'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8888:8888
+    volumes:
+      - conda-storage:/home
