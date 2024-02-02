@@ -10,7 +10,7 @@ volumes:
 
 services:
   miniconda:
-    container_name: 'jupyter_docker'
+    image: miniconda3:1.0
     build:
       context: .
       dockerfile: Dockerfile
