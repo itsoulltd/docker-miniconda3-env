@@ -18,3 +18,4 @@ services:
       - 8888:8888
     volumes:
       - conda-storage:/home
+      - ./src:/opt/spark/src
