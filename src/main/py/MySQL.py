@@ -56,14 +56,15 @@ class MySQLConnect:
 #end-of-class
 
 if __name__ == '__main__':
-    #Read as Panda Df: 
-    #Connect using host.docker.internal or using extra_hosts entry in docker-compose as host-machine:<machine-ip>
-    connect = MySQLConnect(host='host.docker.internal', database='testDB')
-    connect.whichDB()
+    print("Test MySQL.py")
+    ##Read as Panda Df:
+    ##Connect using host.docker.internal or using extra_hosts entry in docker-compose as host-machine:<machine-ip>
+    #connect = MySQLConnect(host='host.docker.internal', database='testDB')
+    #connect.whichDB()
 
     #pd_df = connect.query("Select * from users")
     #pd_df.info()
     #pd_df.head(5)
 
-    connect.close()
+    #connect.close()
 #end
