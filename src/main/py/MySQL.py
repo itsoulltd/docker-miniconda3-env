@@ -3,7 +3,7 @@ import mysql.connector
 from mysql.connector import Error
 
 class MySQLConnect:
-    
+
     '''MySQLConnect Holds a instance var connection to exeecute multiple query.'''
 
     def __init__(self, host='localhost', port=3306, database='testDB', user='root', password='root@123'):
@@ -14,10 +14,10 @@ class MySQLConnect:
         self.password = password
         try:
             self.connection = mysql.connector.connect(host=self.host
-                                                  , port=self.port
-                                                  , database=self.database
-                                                  , user=self.user
-                                                  , password=self.password)
+                                                      , port=self.port
+                                                      , database=self.database
+                                                      , user=self.user
+                                                      , password=self.password)
             if self.connection.is_connected():
                 self.db_Info = self.connection.get_server_info()
                 print("MySQL/MariaDB Server version ", self.db_Info)
