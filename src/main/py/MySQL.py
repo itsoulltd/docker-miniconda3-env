@@ -18,9 +18,9 @@ class MySQLConnect:
                                                   , database=self.database
                                                   , user=self.user
                                                   , password=self.password)
-        if self.connection.is_connected():
-            self.db_Info = self.connection.get_server_info()
-            print("MySQL/MariaDB Server version ", self.db_Info)
+            if self.connection.is_connected():
+                self.db_Info = self.connection.get_server_info()
+                print("MySQL/MariaDB Server version ", self.db_Info)
         except Error as e:
             print(f"Error while connecting to MySQL/MariaDB: {e}")
     #end
@@ -46,7 +46,7 @@ class MySQLConnect:
 
     def query(self, query):
         if self.connection.is_connected():
-            df_mysql = pd.read_sql(query, connection)
+            df_mysql = pd.read_sql(query, self.connection)
             return df_mysql
         else:
             print("DB not connected!")
@@ -54,3 +54,16 @@ class MySQLConnect:
     #end
 
 #end-of-class
+
+if __name__ == '__main__':
+    #Read as Panda Df: 
+    #Connect using host.docker.internal or using extra_hosts entry in docker-compose as host-machine:<machine-ip>
+    connect = MySQLConnect(host='host.docker.internal', database='testDB')
+    connect.whichDB()
+
+    #pd_df = connect.query("Select * from users")
+    #pd_df.info()
+    #pd_df.head(5)
+
+    connect.close()
+#end
