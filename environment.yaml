@@ -11,5 +11,8 @@ dependencies:
     - datetime
     - openpyxl
     - mysql-connector-python
-    - pandas
     - pyyaml
+    - pandas
+    - numpy
+    - requests
+    - beautifulsoup4
