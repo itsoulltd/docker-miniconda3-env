@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python
+  - python>=3.12
   - jupyter
   - scipy
   - pip
@@ -16,3 +16,5 @@ dependencies:
     - numpy
     - requests
     - beautifulsoup4
+
+#End-Of-File
