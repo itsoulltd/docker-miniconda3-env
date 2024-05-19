@@ -33,3 +33,4 @@
 ##To remove old files from git-cache ~>$ git rm --cache **/.ipynb_*
 ##No checkpoints:
 **/.ipynb_checkpoints/
+**/__pycache__/
